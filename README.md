@@ -1,17 +1,60 @@
 # LSUN_group_project
 
-## 1. These part all for Supervised Learning (Ujjwal took charge of unsupervised models)
+## 1. Overview
 
-## 2. Summary table
+This project focuses on **Supervised Learning** using the LSUN (Large-scale Scene Understanding) dataset.  
+(Ujjwal handled the unsupervised models, not included here.)
+
+I selected **6 LSUN scene categories**, each containing **30,000 images**, trainng using **10,000 images**, split as follows:
+
+- **Training:** 7,000
+- **Validation:** 1,500
+- **Testing:** 1,500
+
+---
+
+## 2. Summary Table
 
 ![alt text](image.png)
 
-## 3. Download LSUN raw files from http://dl.yf.io/lsun/scenes/ ,
+---
 
-## I choose 6 features, each feature 30,000pcs files. Each Training/Testing/Val 7000/1500/1500pcs
+## 3. Download LSUN Dataset
 
-## 4. Run "lsun_classification.py" first. Suggest you have better CPU,GPU & RAM before running baseline CNN.
+Download raw LSUN scene files from:
 
-## 5. When you saw your files are not jpg files, run "convert_webp_to_jpg.py"
+**http://dl.yf.io/lsun/scenes/**
 
-## 6. If you got error before confusion matrix, and you already had the model, run "create_confusion_matrix.py"
+Ensure the LMDB files are extracted before running any scripts.
+
+---
+
+## 4. Run the Main Script
+
+Run this script first to train the baseline supervised CNN model:
+
+```bash
+python lsun_classification.py
+```
+
+---
+
+## 5. Convert .webp to .jpg
+
+If your LSUN images are not JPG files, convert them using:
+
+```bash
+python convert_webp_to_jpg.py
+```
+
+---
+
+# 6. Confusion Matrix Fix
+
+If an error occurs before generating the confusion matrix but the model is already trained, run:
+
+```bash
+python create_confusion_matrix.py
+```
+
+---
