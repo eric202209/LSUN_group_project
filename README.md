@@ -58,3 +58,14 @@ python create_confusion_matrix.py
 ```
 
 ---
+
+# 7. Real World Application
+
+Create "test_photos" folder. Put all of your photos which related to features into it, run:
+
+```bash
+cd application
+python real_world_application.py
+```
+
+---
